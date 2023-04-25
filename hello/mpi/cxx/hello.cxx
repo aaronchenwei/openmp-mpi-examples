@@ -21,15 +21,18 @@ int main(int argc, char *argv[])
   //
   //  Initialize MPI.
   //
-  MPI::Init(argc, argv);
+  // MPI::Init(argc, argv);
+  MPI_Init(&argc, &argv);
   //
   //  Get the number of processes.
   //
-  p_num = MPI::COMM_WORLD.Get_size();
+  // p_num = MPI::COMM_WORLD.Get_size();
+  MPI_Comm_size(MPI_COMM_WORLD, &p_num);
   //
   //  Get the individual process ID.
   //
-  id = MPI::COMM_WORLD.Get_rank();
+  // id = MPI::COMM_WORLD.Get_rank();
+  MPI_Comm_rank(MPI_COMM_WORLD, &id);
   //
   //  Only process 0 prints this message.
   //
@@ -49,7 +52,8 @@ int main(int argc, char *argv[])
   //
   //  Shut down MPI.
   //
-  MPI::Finalize();
+  // MPI::Finalize();
+  MPI_Finalize();
 
   return 0;
 }

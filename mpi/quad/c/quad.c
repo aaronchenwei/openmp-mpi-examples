@@ -134,7 +134,7 @@ int main(int argc, char *argv[])
   */
   ierr = MPI_Finalize();
 
-  return 0;
+  return ierr;
 }
 /******************************************************************************/
 

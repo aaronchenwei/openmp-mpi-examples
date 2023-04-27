@@ -1,0 +1,51 @@
+
+PRIME
+  C version
+  Number of processes = 1
+
+        ID      N_LO      N_HI         TOTAL        TIME
+
+         0         2    100000          9592
+
+     Total         2    100000          9592        0.983509
+
+PRIME
+  C version
+  Number of processes = 2
+
+        ID      N_LO      N_HI         TOTAL        TIME
+
+         0         2     50000          5133
+         1     50001    100000          4459
+
+     Total         2    100000          9592        0.788403
+
+PRIME
+  C version
+  Number of processes = 4
+
+        ID      N_LO      N_HI         TOTAL        TIME
+
+         0         2     25000          2762
+         1     25001     50000          2371
+         2     50001     75000          2260
+         3     75001    100000          2199
+
+     Total         2    100000          9592        0.514811
+
+PRIME
+  C version
+  Number of processes = 8
+
+        ID      N_LO      N_HI         TOTAL        TIME
+
+         0         2     12500          1492
+         1     12501     25000          1270
+         2     25001     37500          1206
+         3     37501     50000          1165
+         4     50001     62500          1142
+         5     62501     75000          1118
+         6     75001     87500          1099
+         7     87501    100000          1100
+
+     Total         2    100000          9592        0.472268

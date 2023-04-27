@@ -3,8 +3,6 @@
 #include <time.h>
 #include <mpi.h>
 
-int main(int argc, char *argv[])
-
 /******************************************************************************/
 /*
   Purpose:
@@ -19,6 +17,7 @@ int main(int argc, char *argv[])
 
     Process 0 prints the total and total time.
 */
+int main(int argc, char *argv[])
 {
   int i;
   int id;
@@ -30,21 +29,24 @@ int main(int argc, char *argv[])
   int n_lo = 2;
   int p;
   int prime;
-  double wtime;
+  double wtime = 0.0;
   int total;
 
   /*
     Initialize MPI.
   */
   MPI_Init(&argc, &argv);
+
   /*
     Get the number of processes.
   */
   MPI_Comm_size(MPI_COMM_WORLD, &p);
+
   /*
     Determine this processes's rank.
   */
   MPI_Comm_rank(MPI_COMM_WORLD, &id);
+
   /*
     Work that only process 0 should do.
   */
@@ -60,6 +62,7 @@ int main(int argc, char *argv[])
     total = 0;
     wtime = MPI_Wtime();
   }
+
   /*
     Each process computes a portion of the sum.
   */
@@ -87,6 +90,7 @@ int main(int argc, char *argv[])
     }
   }
   printf("  %8d  %8d  %8d  %12d\n", id, id_n_lo, id_n_hi, id_total);
+
   /*
     Use REDUCE to gather up the partial totals and send to process 0.
   */

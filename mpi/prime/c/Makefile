@@ -9,7 +9,7 @@ PROG = prime
 # space-delimited list of header files
 HDRS =
 # space-delimited list of source files
-SRCS = prime_complete.c
+SRCS = prime.c
 
 #######################
 # Don't change these: #

@@ -9,7 +9,7 @@ PROG = quad
 # space-delimited list of header files
 HDRS =
 # space-delimited list of source files
-SRCS = quad_complete.c
+SRCS = quad.c
 
 #######################
 # Don't change these: #
@@ -21,7 +21,7 @@ OBJDIR = object
 OBJS = $(patsubst %.c, $(OBJDIR)/%.o, $(SRCS))
 
 # name of the compiler
-CC = mpicc
+CC = gcc
 # additional compiler flags to pass in
 CFLAGS = -fopenmp -Wall --std=c11 -L.
 # libraries for the linker

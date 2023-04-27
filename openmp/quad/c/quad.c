@@ -68,6 +68,7 @@ int main(int argc, char *argv[])
   {
     x[i] = ((double)(n - i - 1) * a + (double)(i)*b) / (double)(n - 1);
   }
+
   /*
     Step 2:
 
@@ -87,10 +88,10 @@ int main(int argc, char *argv[])
   wtime1 = omp_get_wtime();
   total = 0.0;
 
-#pragma omp parallel private(i) \
+  #pragma omp parallel private(i) \
     shared(n, pi, x)
 
-#pragma omp for reduction(+ : total)
+  #pragma omp for reduction(+ : total)
   for (i = 0; i < n; i++)
   {
     total = total + 50 / pi / (2500.0 * x[i] * x[i] + 1.0);
@@ -99,6 +100,7 @@ int main(int argc, char *argv[])
   flops = 6 * n;
   wtime2 = omp_get_wtime();
   total = (b - a) * total / (double)n;
+
   /*
     Step 3:
     Print quadrature estimate, Error, W time, MFLOPS rate

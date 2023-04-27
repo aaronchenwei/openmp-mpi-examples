@@ -1,0 +1,42 @@
+
+  Number of MPI processes P = 1
+  Number of intervals N = 1000000000
+  Integral estimate            1.9999808714249918
+  The exact value              2.0000000000000000
+  The error is                 0.0000191285750082
+  Wall clock elapsed seconds = 3.967305
+
+  Number of MPI processes P = 2
+  Number of intervals N = 1000000000
+  Integral estimate            1.9999808714256861
+  The exact value              2.0000000000000000
+  The error is                 0.0000191285743139
+  Wall clock elapsed seconds = 2.102420
+
+  Number of MPI processes P = 4
+  Number of intervals N = 10000000
+  Integral estimate            1.9998087142533727
+  The exact value              2.0000000000000000
+  The error is                 0.0001912857466273
+  Wall clock elapsed seconds = 0.016704
+
+  Number of MPI processes P = 4
+  Number of intervals N = 100000000
+  Integral estimate            1.9999395101354636
+  The exact value              2.0000000000000000
+  The error is                 0.0000604898645364
+  Wall clock elapsed seconds = 0.158610
+
+  Number of MPI processes P = 4
+  Number of intervals N = 1000000000
+  Integral estimate            1.9999808714253933
+  The exact value              2.0000000000000000
+  The error is                 0.0000191285746067
+  Wall clock elapsed seconds = 1.388131
+
+  Number of MPI processes P = 8
+  Number of intervals N = 1000000000
+  Integral estimate            1.9999808714253300
+  The exact value              2.0000000000000000
+  The error is                 0.0000191285746700
+  Wall clock elapsed seconds = 1.085062

@@ -55,8 +55,7 @@ int main(int argc, char *argv[])
   //
   //  How many threads are available by default or environment setting?
   //
-
-#pragma omp parallel private(id)
+  #pragma omp parallel private(id)
   {
     id = omp_get_thread_num();
     thread_num = omp_get_num_threads();
@@ -70,6 +69,7 @@ int main(int argc, char *argv[])
     }
     cout << "  This is process " << id << " out of " << thread_num << "\n";
   }
+
   //
   //  Request double the number of threads.
   //
@@ -83,8 +83,7 @@ int main(int argc, char *argv[])
   //
   //  Now how many threads do we see?
   //
-
-#pragma omp parallel private(id)
+  #pragma omp parallel private(id)
   {
     id = omp_get_thread_num();
     thread_num = omp_get_num_threads();

@@ -21,7 +21,7 @@ HELLO
 HELLO
   Normal end of execution.
 
-  Elapsed wall clock time = 6.06e-05
+  Elapsed wall clock time = 8.89e-05
 
 HELLO
   C++/OpenMP version
@@ -31,24 +31,24 @@ HELLO
 
   Calling OMP_GET_NUM_THREADS inside a
   parallel region, we get the number of
-  threads is 2  This is process 
-1 out of 2
-  This is process 0 out of 2
+  threads is 2
+  This is process 0 out of   This is process 21
+ out of 2
 
   We request 4 threads.
   This is process 1 out of 4
 
-  Calling OMP_GET_NUM_THREADS inside a
-  This is process   This is process   parallel region, we get the number of
-32  threads is 4
-  This is process 0 out of 4
- out of 4 out of 
+  This is process   This is process   Calling OMP_GET_NUM_THREADS inside a
+23 out of   parallel region, we get the number of
+4 out of 4
+  threads is 
 4
+  This is process 0 out of 4
 
 HELLO
   Normal end of execution.
 
-  Elapsed wall clock time = 0.000211401
+  Elapsed wall clock time = 0.000217
 
 HELLO
   C++/OpenMP version
@@ -59,29 +59,29 @@ HELLO
   Calling OMP_GET_NUM_THREADS inside a
   parallel region, we get the number of
   threads is 4
-  This is process 0 out of   This is process   This is process   This is process 2 out of 41
-4 out of 34 out of 
+  This is process 0 out of 4  This is process   This is process   This is process 2 out of 4
+1 out of 4
+3 out of 4
 
-4
 
   We request 8 threads.
-  This is process   This is process   This is process   This is process 7 out of 8
-  This is process 1  This is process 54 out of  out of 6 out of  out of 8
+  This is process   This is process   This is process   This is process   This is process   This is process 1  This is process 7 out of 8
+4 out of 6 out of 8
+352 out of 8
+ out of  out of  out of 8
+888
 
-8
-8
-8
+
+
   Calling OMP_GET_NUM_THREADS inside a
   parallel region, we get the number of
   threads is 8
   This is process 0 out of 8
-3 out of 8
-  This is process 2 out of 8
 
 HELLO
   Normal end of execution.
 
-  Elapsed wall clock time = 0.0004558
+  Elapsed wall clock time = 0.0004134
 
 HELLO
   C++/OpenMP version
@@ -89,41 +89,41 @@ HELLO
   The number of processors available:
   OMP_GET_NUM_PROCS () = 8
 
-  This is process   This is process   This is process   This is process   This is process   Calling OMP_GET_NUM_THREADS inside a
-  parallel region, we get the number of
-  threads is 74 out of 86 out of 5 out of 
-8 out of 83  This is process 8 out of 
+  This is process   This is process   Calling OMP_GET_NUM_THREADS inside a
+4 out of 8
+  This is process   This is process   This is process   This is process   parallel region, we get the number of
+31  threads is 2 out of  out of 8
+8
+  This is process 08 out of 6 out of 8
+8  This is process 
 
-8
-1 out of   This is process 
-  This is process 0 out of 8
-8
-2 out of 8
-8
+5 out of 8
+ out of 78
+ out of 8
 
   We request 16 threads.
-  This is process   This is process   This is process   This is process   This is process   This is process 3 out of 41 out of 16216 out of 
+  This is process   This is process   This is process 1  This is process  out of   This is process   This is process 372  This is process 6 out of 16 out of 
+1645 out of 1616
+
+
  out of 16
-7
-16 out of 
-16
-6 out of 
-16  Calling OMP_GET_NUM_THREADS inside a
-  This is process 
+
+  Calling OMP_GET_NUM_THREADS inside a
   parallel region, we get the number of
-5  threads is  out of 16
-  This is process 16
-  This is process 08 out of 16 out of 16
+  threads is 16 out of 
+16 out of   This is process 0 out of 16
 
-  This is process 11  This is process  out of 916 out of 16
-
-  This is process 10 out of   This is process 16
+16  This is process 8
+ out of 16
+  This is process 11 out of 16
+  This is process 9 out of 16  This is process 
 12 out of 16
-  This is process 15 out of 16
-  This is process 14 out of 16
-  This is process 13 out of 16
+  This is process 15 out of   This is process 1610
+ out of 16
+  This is process 14 out of 16  This is process 13 out of 
+16
 
 HELLO
   Normal end of execution.
 
-  Elapsed wall clock time = 0.0008548
+  Elapsed wall clock time = 0.0006713

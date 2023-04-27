@@ -47,10 +47,11 @@ int main(int argc, char *argv[])
   printf("\n");
   printf("  The number of processors available:\n");
   printf("  OMP_GET_NUM_PROCS () = %d\n", proc_num);
-/*
-  How many threads are available by default or environment setting?
-*/
-#pragma omp parallel private(id)
+
+  /*
+    How many threads are available by default or environment setting?
+  */
+  #pragma omp parallel private(id)
   {
     id = omp_get_thread_num();
     thread_num = omp_get_num_threads();
@@ -74,10 +75,11 @@ int main(int argc, char *argv[])
   printf("  We request %d threads.\n", thread_num);
 
   omp_set_num_threads(thread_num);
-/*
-  Now how many threads do we see?
-*/
-#pragma omp parallel private(id)
+
+  /*
+    Now how many threads do we see?
+  */
+  #pragma omp parallel private(id)
   {
     id = omp_get_thread_num();
     thread_num = omp_get_num_threads();

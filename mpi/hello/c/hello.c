@@ -21,10 +21,12 @@ int main(int argc, char *argv[])
     Initialize MPI.
   */
   ierr = MPI_Init(&argc, &argv);
+
   /*
     Get the number of processes.
   */
   ierr = MPI_Comm_size(MPI_COMM_WORLD, &p_num);
+
   /*
     Get the individual process ID.
   */
@@ -54,5 +56,5 @@ int main(int argc, char *argv[])
   */
   ierr = MPI_Finalize();
 
-  return 0;
+  return ierr;
 }

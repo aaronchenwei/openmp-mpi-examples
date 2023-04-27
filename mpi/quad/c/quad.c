@@ -54,18 +54,22 @@ int main(int argc, char *argv[])
   double q_part;
   double wtime;
   double x;
+
   /*
     Initialize MPI.
   */
   ierr = MPI_Init(&argc, &argv);
+
   /*
     Get the number of processes.
   */
   ierr = MPI_Comm_size(MPI_COMM_WORLD, &p);
+
   /*
     Determine this processes's rank.
   */
   ierr = MPI_Comm_rank(MPI_COMM_WORLD, &id);
+
   /*
     Let process 0 read N.
   */
@@ -82,6 +86,7 @@ int main(int argc, char *argv[])
       scanf("%d", &n);
     }
   }
+
   /*
     Record the starting time.
   */
@@ -89,11 +94,13 @@ int main(int argc, char *argv[])
   {
     wtime = MPI_Wtime();
   }
+
   /*
     The master process broadcasts, and the other processes receive,
     the number of intervals N.
   */
   ierr = MPI_Bcast(&n, 1, MPI_INT, 0, MPI_COMM_WORLD);
+
   /*
     Every process integrates F(X) over a subinterval determined by its process ID.
   */
@@ -107,12 +114,13 @@ int main(int argc, char *argv[])
     n_part = n_part + 1;
     q_part = q_part + f(x);
   }
+
   /*
     Each process sends its local result Q_PART to the MASTER process,
     to be added to the global result QI.
   */
-  ierr = MPI_Reduce(&q_part, &q, 1, MPI_DOUBLE, MPI_SUM, 0,
-                    MPI_COMM_WORLD);
+  ierr = MPI_Reduce(&q_part, &q, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+
   /*
     The master process scales the sum and reports the results.
   */
@@ -129,6 +137,7 @@ int main(int argc, char *argv[])
     printf("  The error is           %24.16f\n", q_diff);
     printf("  Wall clock elapsed seconds = %f\n", wtime);
   }
+
   /*
     Shut down MPI.
   */
@@ -138,7 +147,7 @@ int main(int argc, char *argv[])
 }
 /******************************************************************************/
 
-double f(double x)
+
 
 /******************************************************************************/
 /*
@@ -152,6 +161,7 @@ double f(double x)
 
     Output, double F, the value of F(X).
 */
+double f(double x)
 {
   double value;
 

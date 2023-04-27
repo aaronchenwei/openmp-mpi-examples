@@ -1,5 +1,7 @@
 # openmp-mpi-examples
 
+**OpenMP** is a set of compiler's directives, library procedures and environment variables which was developed for creating multi-threading apps for systems with shared memory (SMP computers) in 1997. This tool was initially designed for Fortan and later C and C++ were included as well. Nowadays, OpenMP is supported by the most popular C/C++ compilers: gcc, icc, PGI compiler. (Notice, that OpenMP isn't any kind of library in typical sense of that word. It doesn't affect the output binary file directly.)
+
 ## Prerequisites
 
 - C/C++ Compiler (gcc/g++)

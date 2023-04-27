@@ -1,0 +1,129 @@
+
+HELLO
+  C++/OpenMP version
+
+  The number of processors available:
+  OMP_GET_NUM_PROCS () = 8
+
+  Calling OMP_GET_NUM_THREADS inside a
+  parallel region, we get the number of
+  threads is 1
+  This is process 0 out of 1
+
+  We request 2 threads.
+
+  Calling OMP_GET_NUM_THREADS inside a
+  parallel region, we get the number of
+  threads is 2
+  This is process 0 out of 2
+  This is process 1 out of 2
+
+HELLO
+  Normal end of execution.
+
+  Elapsed wall clock time = 6.06e-05
+
+HELLO
+  C++/OpenMP version
+
+  The number of processors available:
+  OMP_GET_NUM_PROCS () = 8
+
+  Calling OMP_GET_NUM_THREADS inside a
+  parallel region, we get the number of
+  threads is 2  This is process 
+1 out of 2
+  This is process 0 out of 2
+
+  We request 4 threads.
+  This is process 1 out of 4
+
+  Calling OMP_GET_NUM_THREADS inside a
+  This is process   This is process   parallel region, we get the number of
+32  threads is 4
+  This is process 0 out of 4
+ out of 4 out of 
+4
+
+HELLO
+  Normal end of execution.
+
+  Elapsed wall clock time = 0.000211401
+
+HELLO
+  C++/OpenMP version
+
+  The number of processors available:
+  OMP_GET_NUM_PROCS () = 8
+
+  Calling OMP_GET_NUM_THREADS inside a
+  parallel region, we get the number of
+  threads is 4
+  This is process 0 out of   This is process   This is process   This is process 2 out of 41
+4 out of 34 out of 
+
+4
+
+  We request 8 threads.
+  This is process   This is process   This is process   This is process 7 out of 8
+  This is process 1  This is process 54 out of  out of 6 out of  out of 8
+
+8
+8
+8
+  Calling OMP_GET_NUM_THREADS inside a
+  parallel region, we get the number of
+  threads is 8
+  This is process 0 out of 8
+3 out of 8
+  This is process 2 out of 8
+
+HELLO
+  Normal end of execution.
+
+  Elapsed wall clock time = 0.0004558
+
+HELLO
+  C++/OpenMP version
+
+  The number of processors available:
+  OMP_GET_NUM_PROCS () = 8
+
+  This is process   This is process   This is process   This is process   This is process   Calling OMP_GET_NUM_THREADS inside a
+  parallel region, we get the number of
+  threads is 74 out of 86 out of 5 out of 
+8 out of 83  This is process 8 out of 
+
+8
+1 out of   This is process 
+  This is process 0 out of 8
+8
+2 out of 8
+8
+
+  We request 16 threads.
+  This is process   This is process   This is process   This is process   This is process   This is process 3 out of 41 out of 16216 out of 
+ out of 16
+7
+16 out of 
+16
+6 out of 
+16  Calling OMP_GET_NUM_THREADS inside a
+  This is process 
+  parallel region, we get the number of
+5  threads is  out of 16
+  This is process 16
+  This is process 08 out of 16 out of 16
+
+  This is process 11  This is process  out of 916 out of 16
+
+  This is process 10 out of   This is process 16
+12 out of 16
+  This is process 15 out of 16
+  This is process 14 out of 16
+  This is process 13 out of 16
+
+HELLO
+  Normal end of execution.
+
+  Elapsed wall clock time = 0.0008548

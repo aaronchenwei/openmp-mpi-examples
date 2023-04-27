@@ -9,7 +9,7 @@ PROG = hello
 # space-delimited list of header files
 HDRS =
 # space-delimited list of source files
-SRCS = hello.cxx
+SRCS = hello.cpp
 
 #######################
 # Don't change these: #
@@ -21,7 +21,7 @@ OBJDIR = object
 OBJS = $(patsubst %.cxx, $(OBJDIR)/%.o, $(SRCS))
 
 # name of the compiler
-CC = mpicxx
+CC = g++
 # additional compiler flags to pass in
 CFLAGS = -fopenmp -Wall --std=c++11 -L.
 # libraries for the linker

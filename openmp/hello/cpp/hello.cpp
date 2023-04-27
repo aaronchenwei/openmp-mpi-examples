@@ -25,13 +25,6 @@ using namespace std;
 //    How you find out how many threads are available in a parallel section.
 //    How you set the number of threads.
 //
-//  Modified:
-//
-//    20 July 2008
-//
-//  Author:
-//
-//    John Burkardt
 //
 //****************************************************************************80
 
@@ -49,6 +42,7 @@ int main(int argc, char *argv[])
   cout << "  C++/OpenMP version\n";
 
   wtime1 = omp_get_wtime();
+
   //
   //  How many processors are available?
   //
@@ -57,9 +51,11 @@ int main(int argc, char *argv[])
   cout << "\n";
   cout << "  The number of processors available:\n";
   cout << "  OMP_GET_NUM_PROCS () = " << proc_num << "\n";
-//
-//  How many threads are available by default or environment setting?
-//
+
+  //
+  //  How many threads are available by default or environment setting?
+  //
+
 #pragma omp parallel private(id)
   {
     id = omp_get_thread_num();
@@ -83,9 +79,11 @@ int main(int argc, char *argv[])
   cout << "  We request " << thread_num << " threads.\n";
 
   omp_set_num_threads(thread_num);
-//
-//  Now how many threads do we see?
-//
+
+  //
+  //  Now how many threads do we see?
+  //
+
 #pragma omp parallel private(id)
   {
     id = omp_get_thread_num();
@@ -100,6 +98,7 @@ int main(int argc, char *argv[])
     }
     cout << "  This is process " << id << " out of " << thread_num << "\n";
   }
+
   //
   //  Finish up by measuring the elapsed time.
   //

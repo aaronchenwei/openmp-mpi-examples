@@ -10,9 +10,13 @@ int main()
 
   #pragma omp parallel private(i) firstprivate(j)
   {
+    // j must be 2 (firstprivate), i is undefined (private)...
+    printf("\nInside construct 1: i=%d j=%d", i, j);
+
     i = 3;
     j = j + 2;
-    printf("\nInside construct: i=%d j=%d", i, j);
+
+    printf("\nInside construct 2: i=%d j=%d", i, j);
   }
 
   printf("\n\nOutside construct: i=%d j=%d", i, j);

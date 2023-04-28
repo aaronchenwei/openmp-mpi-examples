@@ -1,6 +1,13 @@
-cmake_minimum_required(VERSION 3.9 FATAL_ERROR)
+# Set minimum required CMake version
+cmake_minimum_required(VERSION 3.20 FATAL_ERROR)
 
+# Set project name
 project(hello)
+
+# set C++11 standard
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(OpenMP)
 if(OpenMP_C_FOUND)

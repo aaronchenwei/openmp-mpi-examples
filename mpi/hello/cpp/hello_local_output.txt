@@ -1,0 +1,39 @@
+
+HELLO - Master process:
+  C++ version
+
+  The number of processes is 1
+
+  Hello from process 0
+
+HELLO - Master process:
+  C++ version
+
+  The number of processes is 2
+
+  Hello from process 0
+  Hello from process 1
+
+HELLO - Master process:
+  C++ version
+
+  The number of processes is 4
+
+  Hello from process 0
+  Hello from process 1
+  Hello from process 2
+  Hello from process 3
+
+HELLO - Master process:
+  C++ version
+
+  The number of processes is 8
+
+  Hello from process 0
+  Hello from process 1
+  Hello from process 2
+  Hello from process 3
+  Hello from process 4
+  Hello from process   Hello from process 7
+  Hello from process 6
+5

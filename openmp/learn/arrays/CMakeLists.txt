@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.20 FATAL_ERROR)
 
 # Set project name
-project(clauses C)
+project(arrays C)
 
 # Set C11 standard
 set(CMAKE_C_STANDARD 11)

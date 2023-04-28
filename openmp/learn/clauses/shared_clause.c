@@ -15,7 +15,7 @@ int main()
     for (i = 0; i < 5; i++)
     {
       sum = sum + a[i];
-       printf("\n\nInside construct: Sum is %d", sum);
+      printf("\n\nInside construct: Sum is %d", sum);
     }
   }
 

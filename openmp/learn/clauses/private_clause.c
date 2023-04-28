@@ -11,7 +11,7 @@ int main()
   #pragma omp parallel private(i)
   {
     i = 3;
-    j = j + 2;
+    j = j + 2; // racing condition
     printf("\nInside construct: i=%d j=%d", i, j);
   }
 

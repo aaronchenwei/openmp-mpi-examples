@@ -79,9 +79,7 @@ int main(int argc, char *argv[])
   double wtime1 = omp_get_wtime();
   double total = 0.0;
 
-  #pragma omp parallel private(i) \
-    shared(n, pi, x)
-
+  #pragma omp parallel shared(n, pi, x)
   #pragma omp for reduction(+ : total)
   for (int i = 0; i < n; i++)
   {

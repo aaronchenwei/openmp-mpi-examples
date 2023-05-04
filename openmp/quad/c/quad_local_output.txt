@@ -1,0 +1,60 @@
+
+QUAD:
+  C version
+
+  Estimate the integral of f(x) from A to B.
+  f(x) = 50 / ( pi * ( 2500 * x * x + 1 ) ).
+  A = 0.000000
+  B = 10.000000
+  Exact integral from 0 to 10 is 0.49936338107645674464...
+
+  Estimate = 0.499442
+  Error    = 7.907843e-05
+  W time   = 0.003842
+  FLOPS    = 6000000
+  MFLOPS   = 1561.605330
+
+QUAD:
+  C version
+
+  Estimate the integral of f(x) from A to B.
+  f(x) = 50 / ( pi * ( 2500 * x * x + 1 ) ).
+  A = 0.000000
+  B = 10.000000
+  Exact integral from 0 to 10 is 0.49936338107645674464...
+
+  Estimate = 0.499442
+  Error    = 7.907843e-05
+  W time   = 0.002470
+  FLOPS    = 6000000
+  MFLOPS   = 2429.149798
+
+QUAD:
+  C version
+
+  Estimate the integral of f(x) from A to B.
+  f(x) = 50 / ( pi * ( 2500 * x * x + 1 ) ).
+  A = 0.000000
+  B = 10.000000
+  Exact integral from 0 to 10 is 0.49936338107645674464...
+
+  Estimate = 0.499442
+  Error    = 7.907843e-05
+  W time   = 0.001023
+  FLOPS    = 6000000
+  MFLOPS   = 5867.970657
+
+QUAD:
+  C version
+
+  Estimate the integral of f(x) from A to B.
+  f(x) = 50 / ( pi * ( 2500 * x * x + 1 ) ).
+  A = 0.000000
+  B = 10.000000
+  Exact integral from 0 to 10 is 0.49936338107645674464...
+
+  Estimate = 0.499442
+  Error    = 7.907843e-05
+  W time   = 0.001056
+  FLOPS    = 6000000
+  MFLOPS   = 5679.666791

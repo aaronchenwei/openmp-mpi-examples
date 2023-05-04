@@ -36,18 +36,9 @@ int main(int argc, char *argv[])
 {
   double a = 0.0;
   double b = 10.0;
-  double error;
   double exact = 0.49936338107645674464;
-  int flops;
-  int i;
-  double mflops;
   int n = 1000000;
   double pi = 3.141592653589793;
-  double total;
-  double wtime;
-  double wtime1;
-  double wtime2;
-  double *x;
 
   printf("\n");
   printf("QUAD:\n");
@@ -59,12 +50,12 @@ int main(int argc, char *argv[])
   printf("  B = %f\n", b);
   printf("  Exact integral from 0 to 10 is 0.49936338107645674464...\n");
 
-  x = (double *)malloc(n * sizeof(double));
+  double *x = (double *)malloc(n * sizeof(double));
   /*
     Step 1:
     Load the array X with evenly spaced values between A and B.
   */
-  for (i = 0; i < n; i++)
+  for (int i = 0; i < n; i++)
   {
     x[i] = ((double)(n - i - 1) * a + (double)(i)*b) / (double)(n - 1);
   }
@@ -85,29 +76,29 @@ int main(int argc, char *argv[])
       # pragma omp parallel private ( ... ) shared ( ... )
       # pragma omp for reduction ( + : ... )
   */
-  wtime1 = omp_get_wtime();
-  total = 0.0;
+  double wtime1 = omp_get_wtime();
+  double total = 0.0;
 
   #pragma omp parallel private(i) \
     shared(n, pi, x)
 
   #pragma omp for reduction(+ : total)
-  for (i = 0; i < n; i++)
+  for (int i = 0; i < n; i++)
   {
     total = total + 50 / pi / (2500.0 * x[i] * x[i] + 1.0);
   }
 
-  flops = 6 * n;
-  wtime2 = omp_get_wtime();
+  int flops = 6 * n;
+  double wtime2 = omp_get_wtime();
   total = (b - a) * total / (double)n;
 
   /*
     Step 3:
     Print quadrature estimate, Error, W time, MFLOPS rate
   */
-  error = fabs(total - exact);
-  wtime = wtime2 - wtime1;
-  mflops = (double)(flops) / 1000000.0 / wtime;
+  double error = fabs(total - exact);
+  double wtime = wtime2 - wtime1;
+  double mflops = (double)(flops) / 1000000.0 / wtime;
 
   printf("\n");
   printf("  Estimate = %f\n", total);

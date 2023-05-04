@@ -4,33 +4,38 @@
 int main()
 {
   int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-  int i, e = 0, o = 0;
-  double itime, ftime, timetaken;
-  int tid;
-  itime = omp_get_wtime();
+  int n = 10;
+  int e = 0, o = 0;
+
+  double itime = omp_get_wtime();
 
   printf("\nInitial Array Declaration:\n");
-  for (i = 0; i < 10; i++)
+  for (int i = 0; i < n; i++)
   {
     printf("%d ", arr[i]);
   }
 
-  #pragma omp parallel for schedule(dynamic) shared(e, o)
-  for (i = 0; i < 10; i++)
+  #pragma omp parallel for
+  #pragma omp reduction(+:e) reduction(+:o)
+  for (int i = 0; i < n; i++)
   {
-    tid = omp_get_thread_num();
-    printf("Thread %d starting...\n", tid);
+    printf("Thread %d - e = %d, o = %d\n", omp_get_thread_num(), e, o);
     if (arr[i] % 2 == 0)
+    {
       e++;
+    }
     else
+    {
       o++;
+    }
   }
 
   printf("\n\nEven numbers in array: %d", e);
   printf("\nOdd numbers in array: %d\n", o);
 
-  ftime = omp_get_wtime();
-  timetaken = ftime - itime;
+  double ftime = omp_get_wtime();
+  double timetaken = ftime - itime;
   printf("\nTime Taken = %f", timetaken);
+
   return 0;
 }

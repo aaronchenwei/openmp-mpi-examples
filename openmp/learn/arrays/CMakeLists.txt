@@ -26,4 +26,6 @@ foreach(SOURCE ${SOURCES})
 
   # Add executable for current source file
   add_executable(${EXECUTABLE_NAME} ${SOURCE})
+
+  target_link_libraries(${EXECUTABLE_NAME} m)
 endforeach()

@@ -18,5 +18,6 @@ int main()
   }
 
   printf("\nProduct is %d\nSum is %d\nDist is %d", sum, product, dist);
+
   return 0;
 }

@@ -5,10 +5,10 @@ int main()
 {
   int x[5] = {1, 2, 3, 4, 5};
   int target = 4;
-  int i, ind;
+  int ind = -1;
 
   printf("\nInitial Declaration:\n");
-  for (i = 0; i < 5; i++)
+  for (int i = 0; i < 5; i++)
   {
     printf("%d ", x[i]);
   }
@@ -16,10 +16,10 @@ int main()
   #pragma omp parallel shared(x)
   {
     #pragma omp single
-    printf("\nStarting search...\n");
+    printf("\nStarting search with thread-%d...\n", omp_get_thread_num());
 
     #pragma omp for
-    for (i = 0; i < 5; i++)
+    for (int i = 0; i < 5; i++)
     {
       if (x[i] == target)
       {
@@ -28,7 +28,7 @@ int main()
     }
 
     #pragma omp single
-    printf("\nTarget at Index %d", ind);
+    printf("\nTarget at Index %d with thread-%d", ind, omp_get_thread_num());
   }
 
   return 0;

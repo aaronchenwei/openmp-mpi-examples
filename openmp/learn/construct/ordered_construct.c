@@ -4,11 +4,11 @@
 int main()
 {
   int arr[] = {1, 2, 3, 4, 5};
-  int i;
+  int n = 5;
 
   printf("\nPrinting array elements using ordered construct\n");
   #pragma omp parallel for ordered schedule(dynamic)
-  for (i = 0; i < 5; i++)
+  for (int i = 0; i < n; i++)
   {
     #pragma omp ordered
     printf("%d ", arr[i]);

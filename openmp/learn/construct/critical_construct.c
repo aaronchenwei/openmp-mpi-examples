@@ -6,13 +6,13 @@ int main()
   int stack[] = {1, 2, 3, 4, 5};
   int top = 5;
   int pop;
-  int i;
 
   printf("\nStack Initial Declaration:\n");
-  for (i = 0; i < top; i++)
+  for (int i = 0; i < top; i++)
   {
     printf("%d ", stack[i]);
   }
+  printf("\n");
 
   #pragma omp parallel shared(stack, top) private(pop)
   {
@@ -23,7 +23,7 @@ int main()
   }
 
   printf("\nStack after construct: \n");
-  for (i = 0; i < top; i++)
+  for (int i = 0; i < top; i++)
   {
     printf("%d ", stack[i]);
   }

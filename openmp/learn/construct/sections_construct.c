@@ -4,10 +4,10 @@
 
 int main(int argc, char *argv[])
 {
-  int i, nthreads, tid, N = 10;
+  int nthreads, tid, N = 10;
   float a[N], b[N], c[N], d[N];
 
-  for (i = 0; i < N; i++)
+  for (int i = 0; i < N; i++)
   {
     a[i] = i * 1.5;
     b[i] = i + 22.35;
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
       #pragma omp section
       {
         printf("Thread %d doing section 1\n", tid);
-        for (i = 0; i < N; i++)
+        for (int i = 0; i < N; i++)
         {
           c[i] = a[i] + b[i];
           printf("Thread %d: c[%d]= %f\n", tid, i, c[i]);
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
       #pragma omp section
       {
         printf("Thread %d doing section 2\n", tid);
-        for (i = 0; i < N; i++)
+        for (int i = 0; i < N; i++)
         {
           d[i] = a[i] * b[i];
           printf("Thread %d: d[%d]= %f\n", tid, i, d[i]);

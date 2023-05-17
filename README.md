@@ -13,7 +13,7 @@
 $ sudo apt install build-essential mpich libmpich-dev
 ``` 
 
-### Alma Linux 8 / CentOS 8
+### Alma Linux 8 (or 9) / CentOS 8 (or 9)
 
 ```sh
 $ sudo dnf groupinstall "Development Tools"
